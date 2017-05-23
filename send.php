@@ -14,13 +14,7 @@ git stafunction get_stats()
         $send['pool'] = trim(`/opt/ethos/sbin/ethos-readconf proxypool1`);
         $send['miner_version'] = trim(`cat /var/run/ethos/miner.versions | grep '$miner ' | cut -d" " -f2 | head -1`);
 
-
-
-
-
-
         // system related info
-
         $send['rx_kbps'] = $rx_kbps;
         $send['tx_kbps'] = $tx_kbps;
         $send['kernel'] = trim(`/bin/uname -r`);
@@ -54,7 +48,6 @@ git stafunction get_stats()
         $send['status'] = trim(`cat /var/run/ethos/status.file`);
 
         // gpu related info
-
         $send['driver'] = trim(`/opt/ethos/sbin/ethos-readconf driver`);
         $send['selected_gpus'] = trim(`/opt/ethos/sbin/ethos-readconf selectedgpus`);
         $send['gpus'] = $gpus;
