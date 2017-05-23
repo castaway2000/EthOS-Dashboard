@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from models import Miners, Test
+from models import Miner_Info, Test
 from rest_framework import serializers
 
 
@@ -16,7 +16,7 @@ class TestSerializer(serializers.HyperlinkedModelSerializer):
 
 class MinersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Miners
-        fields = ('driver', 'selected_gpus', 'gpus', 'fanrpm', 'fanpercent', 'hash', 'miner', 'miner_hashes',
+        model = Miner_Info
+        fields = ('host', 'driver', 'selected_gpus', 'gpus', 'fanrpm', 'fanpercent', 'hash', 'miner', 'miner_hashes',
                   'hwerrors', 'gpu_models', 'bioses', 'default_core', 'default_mem', 'vramsize', 'core', 'mem',
                   'memstates', 'meminfo', 'voltage', 'overheatedgpu', 'throttled', 'powertune')

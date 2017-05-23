@@ -59,7 +59,7 @@ git stafunction get_stats()
         if(preg_match("/sgminer/",$miner)){
                 $send['hwerrors'] = trim(`cat /var/run/ethos/hwerror.file`);
         }
-        $send['models'] = trim(file_get_contents("/var/run/ethos/gpulist.file"));
+        $send['gpumodels'] = trim(file_get_contents("/var/run/ethos/gpulist.file"));
         $send['bioses'] = trim(trim(`/opt/ethos/sbin/ethos-readdata bios | xargs | tr -s ' '`));
         $send['default_core'] = trim(file_get_contents("/var/run/ethos/defaultcore.file"));
         $send['default_mem'] = trim(file_get_contents("/var/run/ethos/defaultmem.file"));
@@ -81,9 +81,10 @@ function send_data()
         $send = get_stats();
         $private_hash = trim(file_get_contents("/var/run/ethos/private_hash.file"));
         $public_hash = trim(file_get_contents("/var/run/ethos/panel.file"));
-         
-        $hook = “http://gpu.website.com/api”
-        $url = “http://gpu.website.com”
+        
+        // update this webhook with your own domain name
+        $hook = "http://www.yourwebsite.com/api";
+        $url = "http://www.yourwebsite.com";
 
         $json = json_encode($send);
         $log = "";

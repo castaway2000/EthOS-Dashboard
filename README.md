@@ -2,8 +2,7 @@
 this is an open source reverse engineered personal dashboard for the EthOS etherium mining operating system
 
 ## To use:
-
-### configure:
+### configure
 run pip install -r requirements.txt
 
 ### then
@@ -21,5 +20,15 @@ place the php script in the respective spot and wait for the cron to run against
 
 
 
-# thats it
+## About the app:
+### /minerstat
+houses all the settings and core url routings
+
+### /main
+houses all the views, models and serializers for the graphical api
+
+### /templates
+houses all the html django templates for the data to be displayed. 
+
+
 
