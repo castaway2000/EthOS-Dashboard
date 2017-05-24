@@ -11,7 +11,6 @@ import os, ast
 
 def get_host_info():
     query = Miner_Info.objects.all().values()
-    # TODO: make dynamicly sized
     miners = []
     for data in query:
         info = [
@@ -57,13 +56,11 @@ def home(request):
 
 
 def api(request):
-    # TODO: make this actually create a file so i can see whats being implemented
     hostname = None
     json_data = None
     hash_id = None
     data = "this url receives get requests for updating the gpu info to the dashboard"
     context = {'data': data}
-    
     if request.GET:
         # for testing purposes only
         # if request.GET['test_data']:
