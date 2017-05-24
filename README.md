@@ -1,6 +1,9 @@
 # EthOS-Dashboard
 this is an open source reverse engineered personal dashboard for the EthOS etherium mining operating system
 
+#### news:
+5/23/2017 now supports multiple miners
+
 ## To use:
 ### configure
 run pip install -r requirements.txt
