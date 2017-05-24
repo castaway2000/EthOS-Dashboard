@@ -14,7 +14,7 @@ class Miner_Info(models.Model):
     objects = models.Manager
     
     # sorted by unique host for many hosts
-    host = models.CharField(max_length=256, blank=True, null=True, default=None)
+    host = models.CharField(max_length=256, blank=True, default=None, primary_key=True, unique=True)
     
     # miner check info
     defunct = models.CharField(max_length=256, blank=True, null=True, default=None)

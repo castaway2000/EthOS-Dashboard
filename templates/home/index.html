@@ -6,8 +6,11 @@
 </head>
 <body>
 {% for host in hosts %}
-    {{ host }}
-    <br/>
+    {% for h in host %}
+        {{h}}
+        <br/>
+    {% endfor %}
+    <hr/>
 {% endfor %}
 
 </body>
