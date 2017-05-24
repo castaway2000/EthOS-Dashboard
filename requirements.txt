@@ -1,3 +1,4 @@
 Django==1.11
 djangorestframework==3.6.3
 Jinja2==2.7.3
+django-tables2==1.6.1

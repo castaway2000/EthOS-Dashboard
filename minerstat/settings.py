@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'minerstat',
-    'rest_framework'
+    'rest_framework',
+    'django_tables2',
 ]
 
 REST_FRAMEWORK = {

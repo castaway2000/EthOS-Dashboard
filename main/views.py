@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from models import Test, Miner_Info
 from rest_framework import viewsets
 from serializers import UserSerializer, MinersSerializer, TestSerializer
+from tables import MinerTable
 import os, ast
 
 
@@ -49,9 +50,11 @@ def get_test_data():
 
 
 def home(request):
-    hosts = get_host_info()
-    context = {'hosts': hosts}
+    # hosts = get_host_info()
+    # context = {'hosts': hosts}
     # TODO: make pretty
+    tables = MinerTable(Miner_Info.objects.all())
+    context = { 'tables': tables }
     return render(request, 'home/index.html', context)
 
 
