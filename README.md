@@ -2,7 +2,7 @@
 this is an open source reverse engineered personal dashboard for the EthOS etherium mining operating system
 
 #### news:
-5/23/2017 now supports multiple miners
+11/19/2018 this is no longer supported by me directly. I welcome contributions from the community and all those who have forks to update the dashboard and add any functionality they you fit. 
 
 ## To use:
 ### configure
