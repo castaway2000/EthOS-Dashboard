@@ -1,4 +1,4 @@
-Django==1.11
-djangorestframework==3.6.3
-Jinja2==2.7.3
+django>=1.11.21
+djangorestframework>=3.9.1
+Jinja2>=2.10.1
 django-tables2==1.6.1
